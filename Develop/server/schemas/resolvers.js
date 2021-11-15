@@ -1,9 +1,12 @@
+const { User, Book } = require("../models");
+
 const resolvers = {
     Query: {
-      helloWorld: () => {
-        return 'Hello Tenoch!';
-      }
+     user: async () => {
+         return User.find();
+     }
     }
   };
   
   module.exports = resolvers;
+
